@@ -1,3 +1,15 @@
+✏查看 Python版本
+====
+    python —version
+
+✏查看 Pytorch版本
+====
+    python 
+    import torch
+    print(torch.**version**)
+    👋ctrl+z 或者exit
+out：1.11.0+cpu
+
 ✏擷取文字-函式
 ====
     #抓【到這裡的文字】
