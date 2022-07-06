@@ -1,4 +1,4 @@
-✏擷取文字
+✏擷取文字-函式
 ====
     #抓【到這裡的文字】
     #參數s是要判斷的字串
@@ -9,6 +9,18 @@
         
     #第一個到》
     tmp_store = tmp[:tmp.index("》")].strip() 
+
+✏擷取文字-index
+====
+    str1 = "HELLO . WORLD"
+    str2 = "."
+    print(:str1.index(str2))      #印出 "HELLO"
+    print(str1.index(str2):)      #印出 "WORLD"
+
+✏擷取數字
+====
+    import re    #導入正規運算式
+    變數 = re.findall(r"\d",字串)
 
 ✏文字的相似度判斷
 ===
@@ -31,3 +43,15 @@
         #獲取最新的文件保存到file_new  
         file_new = os.path.join(test_report,lists[-1]) 
     return file_new
+
+✏程式碼漂亮技巧-分割線/太長要切割
+====
+1.輸入 "#%%" 井趴趴
+=>將出現如圖的直線
+![image](https://user-images.githubusercontent.com/46515944/177496418-b0644aa6-dfa3-4e34-a56b-112d5dd8cccd.png)
+
+
+2.一條程式碼太長
+輸入 "\" 斜線 =>如圖
+
+![image](https://user-images.githubusercontent.com/46515944/177496439-939f0457-3fe3-437a-977b-7928c16fdff7.png)
