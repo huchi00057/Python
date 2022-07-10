@@ -55,6 +55,41 @@ out：1.11.0+cpu
         #獲取最新的文件保存到file_new  
         file_new = os.path.join(test_report,lists[-1]) 
     return file_new
+    
+✏取代記事本文字內的資料
+====
+        #要修改內容的記事本
+        path = "test.txt"
+        f = open(path,'r')
+
+        #修改路徑從 darknetYolo 移至 yolov7-wang 中
+        ssa = "D:/darknetYolo/darknet/build/darknet/x64/yolov4/LabelmeData/tmp/SSA_all"
+        ta = "D:/darknetYolo/darknet/build/darknet/x64/yolov4/LabelmeData/tmp/TA_all"
+        hp = "D:/darknetYolo/darknet/build/darknet/x64/yolov4/LabelmeData/tmp/HP_all"
+        new = "D:/desktop/yolov7-wang/data/image"
+        replacement = ""
+
+        #將取代後的文字都塞到字串 replacement 中
+        for line in f:
+            line = line.strip()
+            if ssa in line:
+                change = line.replace(ssa,new)
+                replacement = replacement + change + "\n"
+
+            elif ta in line:
+                change = line.replace(ta,new)
+                replacement = replacement + change + "\n"
+
+            elif hp in line:
+                change = line.replace(hp,new)
+                replacement = replacement + change + "\n"
+
+        f.close()
+
+        #打開記事本並寫入
+        fout = open("test.txt","w")
+        fout.write(replacement)
+        fout.close()
 
 ✏程式碼漂亮技巧-分割線/太長要切割
 ====
