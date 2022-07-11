@@ -56,6 +56,15 @@ out：1.11.0+cpu
         file_new = os.path.join(test_report,lists[-1]) 
     return file_new
     
+✏額外將結果輸出至記事本
+====
+    tp = 1
+    path = 'want.txt'
+    all_thing = "tp" + str(tp)
+    f = open(path,'a')
+    f.write(all_thing)
+    f.close()
+
 ✏取代記事本文字內的資料
 ====
         #要修改內容的記事本
