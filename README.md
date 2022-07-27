@@ -20,6 +20,34 @@
     f.write(all_thing)
     f.close()
     
+## ✏轉換圖片名稱
+    from PIL import Image
+    import glob
+    import shutil, os
+    from time import sleep
+
+    #建立空的資料夾，若資料夾已存在，記先刪除再創立一個新資料夾
+    def emptydir(dirname):
+        #check資料夾是否存在
+        if os.path.isdir(dirname):
+            #刪除舊的資料夾
+            shutil.rmtree(dirname)
+            #刪除需要時間，故延遲兩秒
+            sleep(2)
+        #建立資料夾
+        os.mkdir(dirname)
+
+    myfiles = glob.glob("pic/*.JPG")
+    emptydir('training')
+    print('開始轉換圖片命名！')
+
+    for i, f in enumerate(myfiles):
+        img = Image.open(f)
+        outname =str('{:0>1d}').format(i+270) + '.jpg'
+        img.save('training/'+ outname)
+
+    print('轉換結束！')
+
 # Anaconda Prompt
 ## ✏查看 Python版本
     python —version
