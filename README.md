@@ -66,7 +66,8 @@ out：1.11.0+cpu
     #參數f是從哪擷取start
     #參數b是擷取到哪end
     def get_str_btw(s, f, b): 
-        par = s.partition(f) return (par[2].partition(b))[0][:]  
+        par = s.partition(f) 
+        return (par[2].partition(b))[0][:]  
         
     #第一個到》
     tmp_store = tmp[:tmp.index("》")].strip() 
