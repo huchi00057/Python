@@ -48,6 +48,9 @@
 
     print('轉換結束！')
 
+## 獲取當前執行檔之路徑
+    img_dir = sys.executable
+    
 # Anaconda Prompt
 ## ✏查看 Python版本
     python —version
