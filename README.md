@@ -51,6 +51,23 @@
 ## ✏獲取當前執行檔之路徑
     img_dir = sys.executable
     
+## ✏修改記事本內重複的文字
+    f = open("D:\desktop\yolov7\data\demo.txt",'r')
+    f_data = ""
+
+    old = "darknetYolo/darknet/build/darknet/x64/yolov4/LabelmeData/tmp/SSA_all"
+    new = "dewsktop/demo/data"
+
+    for lines in f:
+        if old in lines:
+            lines = lines.replace(old,new)
+            f_data += lines
+
+    f = open("D:\desktop\yolov7\data\demo.txt",'w')
+    f.write(f_data)
+
+    f.close()
+    
 # Anaconda Prompt
 ## ✏查看 Python版本
     python —version
